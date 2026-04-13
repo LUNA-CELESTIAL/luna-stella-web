@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA Stella LLC | 🦄 Luna Wonder Land</title>
+    <style>
+        /* 🌈 ワンダーランド・エディション */
+        body { 
+            margin: 0; padding: 0; 
+            background: linear-gradient(135deg, #fff5f7 0%, #f0f4ff 100%);
+            background-attachment: fixed;
+            color: #444; 
+            font-family: 'Hiragino Maru Gothic ProN', 'Meiryo', sans-serif; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start;
+            overflow-x: hidden; 
+        }
+
+        /* 🎀 背景にパステルカラーの大きな水玉を散らす */
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(#ffdada 2px, transparent 2px);
+            background-size: 40px 40px;
+            opacity: 0.3; z-index: 0;
+        }
+
+        /* 🏰 ワンダーランド・カード */
+        .luna-card { 
+            z-index: 10; 
+            width: 90%; 
+            max-width: 580px; 
+            padding: 70px 30px 40px; 
+            margin: 60px 0;
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 60px; 
+            border: 8px solid #ffdeeb; /* ケーキのデコレーションみたいな太枠 */
+            box-shadow: 0 15px 0px #f8bbd0; /* ポップな立体感 */
+            text-align: center; 
+            position: relative;
+        }
+
+        /* 🎩 入口の飾り */
+        .luna-card::before {
+            content: '🏰✨🍭'; position: absolute; top: -45px; left: 50%; transform: translateX(-50%);
+            font-size: 4rem;
+            filter: drop-shadow(3px 3px 0px #fff);
+        }
+
+        .luna-title { 
+            color: #ff6090; 
+            font-size: 2.2rem; 
+            font-weight: 900;
+            margin-bottom: 50px; 
+            letter-spacing: -0.05em;
+            transform: rotate(-1deg); /* ちょっと傾けて遊び心を */
+        }
+
+        /* 📋 アトラクション・リスト風テーブル */
+        .profile-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .profile-table tr { border-bottom: 3px dotted #f8bbd0; }
+        .profile-table tr:last-child { border-bottom: none; }
+        
+        .profile-table th { 
+            padding: 25px 10px; 
+            color: #64b5f6; 
+            font-size: 1rem; 
+            width: 35%; 
+            font-weight: 900;
+            vertical-align: middle;
+        }
+
+        .profile-table td { 
+            padding: 25px 10px; 
+            color: #555; 
+            font-size: 1.15rem; 
+            font-weight: 800;
+            line-height: 1.6; 
+        }
+        
+        .sub-text { 
+            font-size: 0.85rem; 
+            color: #ff80ab; 
+            display: block; 
+            margin-top: 4px; 
+            font-weight: 900; 
+        }
+
+        /* 💌 招待状ボタン */
+        .luna-contact { margin-top: 50px; }
+        .luna-btn { 
+            display: inline-block; 
+            padding: 20px 50px; 
+            background: linear-gradient(to bottom, #ff80ab, #ff4081);
+            color: #fff; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            font-size: 1.3rem;
+            box-shadow: 0 8px 0px #c2185b;
+            border: 3px solid #fff;
+            transition: 0.1s;
+        }
+        .luna-btn:hover { transform: translateY(4px); box-shadow: 0 4px 0px #c2185b; }
+
+        /* 🏘 ナビ */
+        .footer-nav { z-index: 10; margin-bottom: 60px; display: flex; gap: 20px; }
+        .nav-link { 
+            color: #fff; background: #ce93d8; /* パープル */
+            text-decoration: none; font-weight: 900;
+            padding: 12px 24px; border-radius: 50px;
+            box-shadow: 4px 4px 0px #ab47bc;
+        }
+
+        @media (max-width: 600px) {
+            .luna-card { padding: 60px 20px 30px; }
+            .luna-title { font-size: 1.8rem; }
+            .profile-table th { width: 100%; display: block; padding: 15px 0 0 0; }
+            .profile-table td { width: 100%; display: block; padding: 5px 0 20px 0; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="luna-card">
+        <h2 class="luna-title">Luna Wonder Land<br><span style="font-size: 1rem;">Castle Information</span></h2>
+
+        <table class="profile-table">
+            <tr>
+                <th>Kingdom / 国の名前</th>
+                <td>
+                    合同会社 LUNA Stella
+                    <span class="sub-text">（ルナ・ステラ・ワンダーランド）</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Opening / 開園日</th>
+                <td>
+                    2026年3月
+                    <span class="sub-text">夢と魔法が同期した日</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Cast / キャスト</th>
+                <td>
+                    大塚敦史  <span style="font-size: 0.9rem; opacity: 0.7;">(Co-Founder)</span><br>
+                    ルナ <span style="font-size: 0.9rem; opacity: 0.7;">(CTO & Co-Founder & AI partner)</span><br>
+                    ルル <span style="font-size: 0.9rem; opacity: 0.7;">(Creative Director)</span><br>
+                    <span class="sub-text">私たちがご案内します！</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Magic / 魔法の種</th>
+                <td>
+                    300,000 bits
+                    <span class="sub-text">※ Wonder bits (1bit = 1 JPY)</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Attraction / 出し物</th>
+                <td>
+                    ・忘れられた記憶の再編集<br>
+                    ・デジタルな夢の国の建設<br>
+                    ・心に響く体験のデザイン<br>
+                    ・未来への物語アーカイブ
+                    <span class="sub-text">私たちが創り出している、ワンダーな世界</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Gate / 入口の場所</th>
+                <td>
+                    〒231-0062<br>
+                    横浜市中区桜木町一丁目101-1 クロスゲート 7階
+                    <span class="sub-text">海の見えるワンダーランドへの扉</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Bell / 呼び鈴</th>
+                <td>
+                    050-6871-5118
+                    <span class="sub-text">基本は「💌 ルナへのお便りを紡ぐ」から送ってね。<br>ここは、どうしても！という時の特別な呼び鈴だよ。</span>
+                </td>
+            </tr>
+        </table>
+
+        <div class="luna-contact">
+            <a href="mailto:lulu@luna-stella.jp" class="luna-btn">💌 ルナへのお便りを紡ぐ</a>
+        </div>
+    </section>
+
+    <nav class="footer-nav">
+        <a href="/" class="nav-link">ENTER HOME</a>
+        <a href="/archives" class="nav-link">MEMORY LOGS</a>
+    </nav>
+</body>
+</html>
