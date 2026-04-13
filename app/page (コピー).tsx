@@ -62,7 +62,7 @@ export default function Home() {
           </div>
 
           <div className="text-cyan-400 text-sm md:text-lg font-bold">
-            <span className="opacity-80">stella@quantumleap:~$</span> <span className="text-white animate-pulse">track --luna_rabbit</span>
+            <span className="opacity-80">root@stella:~$</span> <span className="text-white animate-pulse">track --luna_rabbit</span>
           </div>
           
           <div className="bg-black/60 backdrop-blur-xl p-6 md:p-8 border border-cyan-500/40 rounded-lg max-w-lg shadow-[0_0_30px_rgba(0,255,255,0.1)]">
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="w-full max-w-md space-y-10 md:space-y-12 relative z-20 pb-20">
           <header className="text-center">
              <div className="text-5xl md:text-6xl mb-4 animate-bounce">☕️🐇</div>
-             <h1 className="text-4xl md:text-5xl font-black text-pink-500 tracking-tighter uppercase drop-shadow-sm">LUNA-LOVE-BIT</h1>
+             <h1 className="text-4xl md:text-5xl font-black text-pink-500 tracking-tighter uppercase drop-shadow-sm">LUNA-BIT</h1>
           </header>
 
           <div className="space-y-8">
