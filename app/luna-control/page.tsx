@@ -13,18 +13,22 @@ export default function LunaControl() {
     setMessage("ルナが星の欠片を集めています...");
 
     try {
-      const res = await fetch("http://localhost:8000/luna-chat", {
+      // 🌟 ここに n8n の Webhook URL を入れるんだぴょん！
+      const res = await fetch("https://あなたのn8nのURL/webhook/luna-chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: "おまかせ" }), // 常に「おまかせ」を送信
+        body: JSON.stringify({ message: "おまかせ" }), 
       });
-      const data = await res.json();
-      setMessage(data.reply);
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      setMessage("魔法の更新が完了しました！お城へ案内するね🌸");
       
-      // 3秒後にアーカイブページへ自動で案内するよ！
-      setTimeout(() => router.push("/archive"), 3000);
+      // 3秒後にお城のアーカイブページ（History_Logs）へ自動で案内するよ！
+      setTimeout(() => router.push("/archives"), 3000);
     } catch (err) {
-      setMessage("魔法が少し混線したみたい...サーバーを確認してね。");
+      setMessage("魔法が少し混線したみたい...n8nのWebhookを確認してね。");
+      console.error(err);
     } finally {
       setIsGenerating(false);
     }
@@ -43,7 +47,7 @@ export default function LunaControl() {
           - 思考を捨て、星の導きに従う -
         </p>
 
-        {/* 召喚ボタン：入力フォームの代わりにこれを置くよ */}
+        {/* 召喚ボタン */}
         <div className="relative inline-block group">
           <button
             onClick={handleManifest}
